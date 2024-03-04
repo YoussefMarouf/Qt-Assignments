@@ -18,7 +18,8 @@ HEADERS += \
     welcomewindow.h
 
 FORMS += \
-    login.ui
+    login.ui \
+    welcomewindow.ui
 
 TRANSLATIONS += \
     CinemaProject_en_GB.ts

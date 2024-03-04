@@ -1,15 +1,22 @@
 #ifndef WELCOMEWINDOW_H
 #define WELCOMEWINDOW_H
 
-#include <QMainWindow>
+#include <QDialog>
 
-class WelcomeWindow : public QMainWindow
+namespace Ui {
+class WelcomeWindow;
+}
+
+class WelcomeWindow : public QDialog
 {
     Q_OBJECT
+
 public:
     explicit WelcomeWindow(QWidget *parent = nullptr);
+    ~WelcomeWindow();
 
-signals:
+private:
+    Ui::WelcomeWindow *ui;
 };
 
 #endif // WELCOMEWINDOW_H

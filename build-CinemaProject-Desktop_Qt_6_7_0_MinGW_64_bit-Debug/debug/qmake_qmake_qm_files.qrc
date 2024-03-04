@@ -1,5 +1,9 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource prefix="i18n">
+<<<<<<< HEAD
 <file alias="CinemaProject_en_GB.qm">C:/Users/youse/Desktop/Spring 24/Cs 2/Codes/Qt-Assignments/build-CinemaProject-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/debug/CinemaProject_en_GB.qm</file>
+=======
+<file alias="CinemaProject_en_GB.qm">C:/Users/anass/OneDrive/Desktop/Qt-Assignments/build-CinemaProject-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/debug/CinemaProject_en_GB.qm</file>
+>>>>>>> 990d2e93f6b775e1ac2382e5914a1b63bb44dd7b
 </qresource>
 </RCC>

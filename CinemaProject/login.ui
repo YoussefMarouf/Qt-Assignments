@@ -63,7 +63,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="LineEdit_Username_2">
+   <widget class="QLineEdit" name="LineEdit_Password">
     <property name="geometry">
      <rect>
       <x>160</x>

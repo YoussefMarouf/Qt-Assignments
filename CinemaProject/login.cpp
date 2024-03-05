@@ -23,9 +23,9 @@ void Login::on_pushButton_Login_clicked()
     for(int i =0 ;i< UsersCount;i++){
         if(ui->LineEdit_Username->text() == usernames[i] && ui->LineEdit_Password->text() == passwords[i] )
         {
-            WelcomeWindow* w=new WelcomeWindow(this);
+            WelcomeWindow* w=new WelcomeWindow(this,usernames[i],age[i]);
             hide();
-            w->setname(ui->LineEdit_Username->text());
+
             w->show();
         }
     else

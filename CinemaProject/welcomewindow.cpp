@@ -2,22 +2,25 @@
 #include "ui_welcomewindow.h"
 #include "login.h"
 #include <QString>
-WelcomeWindow::WelcomeWindow(QWidget *parent)
+#include <QPixmap>
+WelcomeWindow::WelcomeWindow(QWidget *parent,QString name ,int age)
     : QDialog(parent)
     , ui(new Ui::WelcomeWindow)
 {
     ui->setupUi(this);
-
+    QPixmap pix ("C:\\Users\\youse\\Desktop\\Spring 24\\Cs 2\\Codes\\Qt-Assignments\\CinemaProject\\Imgs\\Cinema.jpg");
+    QString str = QString :: number ( age );
+    ui->label_welcome->setText("Hello, "  + name + " " + str );
+    int w=ui->label_image->width();
+    int h=ui->label_image->height();
+    ui->label_image->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
 }
 
 WelcomeWindow::~WelcomeWindow()
 {
     delete ui;
 }
-void WelcomeWindow::setname(QString n)
-{
-ui->label_welcome->setText("HEllo, "  + n);
-}
+
 
 void WelcomeWindow::on_pushButton_clicked()
 {

@@ -1,6 +1,7 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
-
+#include "users.h"
+#include "login.h"
 RegisterWindow::RegisterWindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::RegisterWindow)
@@ -24,10 +25,11 @@ void RegisterWindow::on_pushButton_clicked()
 {
     QString un=ui->lineEdit_Username->text();
     QString pass=ui->lineEdit_password->text();
-    QString repass=ui->lineEdit_password->text();
+    QString repass=ui->lineEdit_repass->text();
     QString day=ui->comboBox_Day->currentText();
     QString month=ui->comboBox_Month->currentText();
     QString year=ui->comboBox_Year->currentText();
+    int x=year.toInt();
     bool male=ui->radioButton_Male->isChecked();
     bool female=ui->radioButton_Female->isChecked();
     bool admin=ui->radioButton_Admin->isChecked();
@@ -39,6 +41,50 @@ void RegisterWindow::on_pushButton_clicked()
     bool horror=ui->checkBox_Horror->isChecked();
     bool other=ui->checkBox_Other->isChecked();
 
+        bool exist,passmatch,agegood,readytogo;
+        for (int i = 0; i < UsersCount; ++i) {
+            if(usernames[i]==un)
+            {
+                exist=1;
+            }
+        }
+
+        if(pass == repass)
+        {
+            passmatch=1;
+        }
+        if(2024-x>12)
+        {
+            agegood=1;
+        }
+        if( un !="" && (male || female) && (admin || user ) && (action || horror|| other||comedy || drama|| romance) &&(pass == repass))
+        {
+
+readytogo=1;
+        }
+        else
+        {
+
+            ui->label_error4->setVisible(1);
+        }
+        ui->label_error1->setVisible(exist);
+        ui->label_error2->setVisible(!passmatch);
+        ui->label_error3->setVisible(!agegood);
+
+        if(!exist && passmatch  && agegood && readytogo)
+        {
+            usernames[UsersCount]=un;
+            passwords[UsersCount]=pass;
+            age[UsersCount]=2024-x;
+            UsersCount++;
+            hide();
+            Login* l=new Login(this);
+            l->show();
+        }
+
+
+
 
 }
+
 

@@ -1,7 +1,7 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
 #include "users.h"
-#include "login.h"
+#include "welcomewindow.h"
 RegisterWindow::RegisterWindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::RegisterWindow)
@@ -78,8 +78,8 @@ readytogo=1;
             age[UsersCount]=2024-x;
             UsersCount++;
             hide();
-            Login* l=new Login(this);
-            l->show();
+            WelcomeWindow* w=new WelcomeWindow(this,un,2024-x);
+            w->show();
         }
 
 

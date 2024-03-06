@@ -57,7 +57,7 @@ void RegisterWindow::on_pushButton_clicked()
         {
             agegood=1;
         }
-        if( un !="" && (male || female) && (admin || user ) && (action || horror|| other||comedy || drama|| romance) && passmatch)
+        if( un !="" && pass!="" && (male || female) && (admin || user ) && (action || horror|| other||comedy || drama|| romance) && passmatch)
         {
 
 readytogo=1;

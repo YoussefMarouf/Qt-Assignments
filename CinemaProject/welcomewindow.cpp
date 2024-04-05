@@ -8,7 +8,7 @@ WelcomeWindow::WelcomeWindow(QWidget *parent,QString name ,int age)
     , ui(new Ui::WelcomeWindow)
 {
     ui->setupUi(this);
-    QPixmap pix ("C:\\Users\\anass\\OneDrive\\Desktop\\Qt-Assignments\\CinemaProject\\Imgs\\Cinema.jpg");
+    QPixmap pix(":/resources/Imgs/Cinema.jpg");
     QString str = QString :: number ( age );
     ui->label_welcome->setText("Hello, "  + name + " " + str );
     int w=ui->label_image->width();
